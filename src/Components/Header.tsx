@@ -14,7 +14,7 @@ const Header = () => {
         <div className="w-max mx-auto flex flex-col items-center gap-2">
           <div className="flex items-center gap-4 self-center">
             <Image
-              className="h-full"
+              className="h-full w-auto"
               src={"/logo.webp"}
               alt="LOGO"
               height={50}
