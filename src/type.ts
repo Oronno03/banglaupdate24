@@ -12,3 +12,28 @@ export interface ICategory {
     url: string,
     scrapable: boolean,
 }
+
+export interface INews {
+    id: string,
+    title: string,
+    description: string,
+    link: string,
+    imageUrl: string,
+    imageAlt: string,
+    category: string,
+    type: string,
+    isLive: string,
+    firstPublished: string,
+    lastPublished: string,
+    source: string,
+}
+
+export interface ILatestHeadlines {
+    success: boolean,
+    count: number,
+    limit: number,
+    cachedAt: string,
+    total: number,
+    offset: number,
+    data: INews[]
+}

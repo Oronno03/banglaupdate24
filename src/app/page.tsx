@@ -1,6 +1,9 @@
+import Marquee from "@/Components/Marquee";
 
 export default function Home() {
   return (
-    <div>Whatever</div>    
+    <div>
+      <Marquee />
+    </div>    
   );
 }
