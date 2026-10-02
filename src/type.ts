@@ -2,10 +2,10 @@ export interface ICategories {
   success: boolean;
   count: number;
   cachedAt: string;
-  data: ICategory[];
+  data: ICategoriesData[];
 }
 
-export interface ICategory {
+export interface ICategoriesData {
   slug: string;
   title: string;
   topicid: string | null;
@@ -59,5 +59,17 @@ export interface IMostRead {
   count: number;
   cachedAt: string;
   generated: string;
+  data: INews[];
+}
+
+export interface ICategory {
+  success: boolean;
+  count: number;
+  cachedAt: string;
+  slug: string;
+  topicId: string;
+  title: string;
+  page: number;
+  pageCount: number;
   data: INews[];
 }
