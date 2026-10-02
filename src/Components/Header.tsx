@@ -1,22 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Navlinks from "./Navlinks";
 
 const Header = () => {
   const date = new Date().toLocaleDateString("bn-BD", {
     dateStyle: "full",
   });
-
-  const navLinks = [
-    "হোম",
-    "রাজনীতি",
-    "বিশ্ব",
-    "অর্থনীতি",
-    "স্বাস্থ্য",
-    "খেলা",
-    "প্রযুক্তি",
-    "দেখুন",
-  ];
 
   return (
     <header className="flex relative pt-4">
@@ -37,15 +27,7 @@ const Header = () => {
           </div>
         </div>
 
-        <nav className="">
-          <ul className="flex gap-5 text-gray-500 text-[16px] justify-center">
-            {navLinks.map((link, idx) => (
-              <li key={idx} className={`cursor-pointer`}>
-                {link}
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <Navlinks />
       </div>
 
       <div className="flex gap-2 absolute right-5 top-1/2 translate-y-[-50%]">
