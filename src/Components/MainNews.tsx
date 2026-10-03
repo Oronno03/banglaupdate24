@@ -9,7 +9,7 @@ const MainNews = ({ section }: { section: ISection }) => {
       <div className="h-full border-gray-400 border rounded-xl flex flex-col gap-2 overflow-hidden">
         {section.articles.slice(1, 6).map((article, idx) => (
           <div key={idx}>
-            <Link href={"/"}>
+            <Link href={`/news/${article.id}`}>
               <div className="px-4 py-2">
                 <p className="font-bold text-red-700 text-[12px]">
                   {section.title}

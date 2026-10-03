@@ -1,4 +1,5 @@
 import { IMostRead } from "@/type";
+import Link from "next/link";
 import React from "react";
 
 const fetchMostreads = async (): Promise<IMostRead> => {
@@ -21,7 +22,9 @@ const MostReads = async () => {
             <span className="text-[18px] font-bold text-red-700">
               {idx + 1}
             </span>
+            <Link href={`/news/${read.id}`}>
             {read.title}
+            </Link>
           </h1>
         </div>
       ))}
