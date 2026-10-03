@@ -24,8 +24,8 @@ const Marquee = async () => {
           className="py-1"
           pauseOnHover={true}
         >
-          {headlineDatas.map(({ title }, idx) => (
-            <Link href={"/"} key={idx}>
+          {headlineDatas.map(({ title, id }, idx) => (
+            <Link href={`/news/${id}`} key={idx}>
               <span className="hover:underline underline-offset-1">
                 {title}
               </span>

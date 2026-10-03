@@ -19,7 +19,7 @@ const Navlinks = async () => {
             <li className={`cursor-pointer`}>হোম</li>
           </Link>
         {navLinks.filter(link => link.scrapable).map(({ title, slug }, idx) => (
-          <Link key={idx} href={slug}>
+          <Link key={idx} href={`/${slug}`}>
             <li className={`cursor-pointer`}>{title}</li>
           </Link>
         ))}

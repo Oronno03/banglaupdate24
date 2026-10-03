@@ -15,7 +15,7 @@ const NewsCard = ({title, news}: {title: string, news:INews}) => {
       />
       <div className="px-4 py-4 flex flex-col gap-2">
         <p className="text-red-700 text-[14px]">{title}</p>
-        <Link href={"/"}>
+        <Link href={`/news/${news.id}`}>
           <h1 className="font-bold text-xl hover:underline">
             {news.title}
           </h1>
