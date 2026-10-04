@@ -1,11 +1,11 @@
 import Image from "next/image";
-import React from "react";
+import { notFound } from "next/navigation";
 
 const fetchNewsData = async (id: string) => {
   const res = await fetch(`https://news-api-v2.vercel.app/api/article/${id}`);
 
   if (!res.ok) {
-    throw new Error("Failed to fetch news");
+    return notFound();
   }
 
   const data = await res.json();

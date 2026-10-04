@@ -1,5 +1,6 @@
 import NewsCard from "@/Components/NewsCard";
 import { ICategory } from "@/type";
+import { notFound } from "next/navigation";
 import React from "react";
 
 const fetchCategoryData = async (category: string): Promise<ICategory> => {
@@ -16,7 +17,7 @@ const page = async ({ params }: { params: Promise<{ category: string }> }) => {
   const data = await fetchCategoryData(category);
 
   if (!data.success) {
-    return <div>INVALID CATEGORY</div>;
+    return notFound();
   }
 
   const news = data.data;
